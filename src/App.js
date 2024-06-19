@@ -1,23 +1,38 @@
-import logo from './logo.svg';
+import React from 'react';
+import Image from './imagens/people.png'
+
 import './App.css';
 
 function App() {
+  const [comentario, setComentario] = React.useState()
+  const [todosOsComentarios, setTodosOsComentarios] = React.useState([])
+
+  function digiteiNoTextarea(eventoDoTextarea){
+    setComentario(eventoDoTextarea.target.value)
+  }
+
+  function cliqueiNoBotâo(){
+    const todosOsComentariosAnteriores = [ ... todosOsComentarios, comentario]
+
+    setTodosOsComentarios(todosOsComentariosAnteriores)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <img src={Image} alt='imagem-pessoas' />
+      <form id='formulario'>
+        <p>Vamos começar!</p>
+      <textarea onChange={digiteiNoTextarea} id='nome' placeholder='Digite seu nome...'></textarea>
+      <textarea onChange={digiteiNoTextarea} id='idade' placeholder='Digite sua idade...'></textarea>
+      <button onClick={cliqueiNoBotâo}>Próximo</button>
+
+      <ul>
+        {todosOsComentarios.map(coment => (
+           <li key={coment}>{coment}</li>
+        ))}
+      </ul>
+      </form>
+
     </div>
   );
 }

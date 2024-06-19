@@ -1,38 +1,73 @@
-.App {
+*{
+  padding: 0;
+  margin: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000;
+}
+div{
+  background-image: url(./imagens/fundo1.jpeg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 600px;
+  height: 670px;
+  margin: 25px auto;
+  border-radius: 50px 50px 0 0;
+  box-shadow: rgba(90, 66, 112, 0.301) 0px 2px 40px 3px;
+}
+
+form{
+  width: 568px;
+  height: 401px;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: saturate(100%) blur(20px);
+  padding: 1rem;
+  border-radius: 60px 60px 0 0;
+
+}
+
+form p{
+  background: none;
+  font-weight: 700;
+  font-size: 35px;
   text-align: center;
+  color: white;
+  margin: 20px 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+img{
+  display: block;
+  padding: 30px;
+  background: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+textarea{
+  background-color: rgba(255, 255, 255, 0.288);
+  display: block;
+  width: 414px;
+  height: 35px;
+  border-radius: 15px;
+  padding: 10px 30px;
+  font-size: 20px;
+  border: none;
+  box-shadow: rgb(0, 0, 0) 0px 10px 20px -10px;
+  margin-bottom: 40px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+button{
+  display: block;
+  background-color: #000;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 13px;
+  width: 475px;
+  border-radius: 15px;
+  border: none;
+  margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul li{
+  
+  color: #ffff;
 }
